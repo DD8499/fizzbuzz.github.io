@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+    <style>
+        body{
+            color: rgb(5, 5, 5);
+            font-size: xx-large;
+            font-style: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+           background-color: rgba(43, 223, 43, 0.5);
+        }
+       .container{
+           position: sticky;
+           left: 0%;
+           top: 0%;
+       }
+       input{
+           height: 27px;
+           width: 200px;
+           border-radius: 7px;
+           border: none;
+           text-align: center;
+       }
+       button{
+        height: 27px;
+           width: 130px;
+           border-radius: 7px;
+           border: none;
+       }
+       button:hover{
+           color: royalblue;
+           background-color: rgb(214, 62, 62);
+       }
+    </style>
+</head>
+<body><div class="container">
+    <input id="input" type="number" value="">
+    <button id="btn" onclick="fn()">fizzbuzz</button>
+</div>
+    <div></div>
+  <script>
+        function fn(){
+
+        
+        var num=document.getElementById("input").value
+
+        for(i=1; i<=num; i++)
+        {
+            var ele=document.createElement("p")
+            ele.innerText=i
+
+            if(i%3==0 && i%5==0)
+            {
+                ele.innerText="fizzbuzz"
+            }
+            else if(i%3==0)
+            {
+                ele.innerText="fizz"
+            }
+            else if(i%5==0)
+            {
+                ele.innerText="buzz"
+            }
+            else{
+                ele.innerText=i
+            }
+            var main=document.querySelector("div")
+            main.append(ele)
+        }
+        }
+    </script>
+</body>
+</html>
